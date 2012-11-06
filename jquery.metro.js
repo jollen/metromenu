@@ -1,10 +1,11 @@
 /*
-* Metro Menu - Metro UI Style Menus - jQuery Plugin
-* http://www.moko365.com
-* Copyright (c) 2012 Moko365 Inc.
-* MIT License
-*/
+ Metro Menu - Metro UI Style Menus - jQuery Plugin
 
+ https://github.com/jollen/metromenu
+ version 0.9pre1.121106
+ Copyright (c) 2012 Jollen Chen
+ Licensed under the MIT license
+*/
 (function ($) {	
 $.fn.addMetroSimpleText = function (items) {
 	var html_code = "";
