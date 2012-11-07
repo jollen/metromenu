@@ -32,9 +32,11 @@ $.fn.addMetroSimpleText = function (items) {
 	ctx.fadeIn('slow');
 }
 	
-$.fn.AddMetroSimpleButton = function (theme, image, text, items, subCtx) {
+$.fn.AddMetroSimpleButton = function (theme, image, text, items, subCtx, id) {
 	var html_code = "<div";
 	var ctx = $(this);
+		
+	html_code += " id='" + id + "'";
 		
 	if (items != '') {
 	    html_code += " onclick='$(\"#" + subCtx + "\").addMetroSimpleText(" + JSON.stringify(items) + ");'";
@@ -45,7 +47,25 @@ $.fn.AddMetroSimpleButton = function (theme, image, text, items, subCtx) {
 	html_code += "</div>\n";
 	
 	ctx.append(html_code);
+	ctx.fadeIn('slow');
+};
+
+$.fn.AddMetroSimpleTile = function (theme, image, text, link, id) {
+	var html_code = "<div";
+	var ctx = $(this);
+		
+	html_code += " id='" + id + "'";
+		
+	if (link != '') {
+	    html_code += " onclick='parent.location=\"" + link + "\"'";
+	}
+
+	html_code += " class='metro metrodouble " + theme + "'>\n";
+	html_code += "<div class='imgdouble'><img src='" + image + "' alt='" + text + "' /></div>\n";
+	html_code += "<span>" + text + "</span>\n";
+	html_code += "</div>\n";
 	
+	ctx.append(html_code);
 	ctx.fadeIn('slow');
 };
 })(jQuery);

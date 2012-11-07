@@ -7,13 +7,14 @@
     <script src="./jquery.metro.js" type="text/javascript"></script>
     <script type="text/javascript">
     var ecourseItems = [
-    	{bgcolor: '#97c02c', text: 'Android Porting + Embedded Linux 基礎入門', link: 'http://www.moko365.com/ecourse-android-porting-embedded-linux'},
-    	{bgcolor: '#97c02c', text: 'Android Porting 移植技術與實作', link: 'http://www.moko365.com/ecourse-android-porting-practice'}
+    	{bgcolor: '#03aeda', text: 'Android Porting + Embedded Linux 基礎入門', link: 'http://www.moko365.com/ecourse-android-porting-embedded-linux'},
+    	{bgcolor: '#03aeda', text: 'Android Porting 移植技術與實作', link: 'http://www.moko365.com/ecourse-android-porting-practice'},
+    	{bgcolor: '#03aeda', text: 'Android ＆ Linux: 驅動程式原理與整合', link: 'http://www.moko365.com/ecourse-android-linux-device-drivers'}    	
     ];
     		
 	var seminarItems = [
-		{bgcolor: '#03aeda', text: '六小時完成手機版遊戲APP：多媒體與互動技術', link: 'http://www.moko365.com/enterprise/html5-cloud-2-multiplayer-game'},
-		{bgcolor: '#03aeda', text: '六小時完成手機即時通APP：NodeJS 與 Data Push', link: 'http://www.moko365.com/enterprise/html5-cloud-1-messenger-app'}
+		{bgcolor: '#97c02c', text: '六小時完成手機版遊戲APP：多媒體與互動技術', link: 'http://www.moko365.com/enterprise/html5-cloud-2-multiplayer-game'},
+		{bgcolor: '#97c02c', text: '六小時完成手機即時通APP：NodeJS 與 Data Push', link: 'http://www.moko365.com/enterprise/html5-cloud-1-messenger-app'}
 	];
 
 	var trainingItems = [
@@ -25,16 +26,17 @@
 	];
           
     $(document).ready(function () {
-   		$("#metroui_menu").AddMetroSimpleButton('metro-seminar', 'images/CD.png', '研討講座', seminarItems, "metroui_item");
-   	
-		$("#metroui_menu").AddMetroSimpleButton('metro-android', 'images/Android.png', '數位課程', ecourseItems, "metroui_item");
+   		$("#metroui_menu").AddMetroSimpleButton('metro-android', 'images/Android.png', '研討講座', seminarItems, "metroui_item", "seminar-menu");
+		$("#metroui_menu").AddMetroSimpleButton('metro-seminar', 'images/CD.png', '數位課程', ecourseItems, "metroui_item", "ecourse-menu");
+		$("#metroui_menu").AddMetroSimpleButton('metro-black', 'images/Microphone.png', '教育訓練', trainingItems, "metroui_item", "training-menu");
 		
-		$("#metroui_menu").AddMetroSimpleButton('metro-black', 'images/Microphone.png', '教育訓練', trainingItems, "metroui_item");
+		$("#metroui_menu").AddMetroSimpleTile('metro-seminar', 'images/CD.png', 'Android ＆ Linux：驅動程式原理與整合', "http://www.moko365.com/ecourse-android-linux-device-drivers", "ecourse-tile");
+		
     });
     </script>
 </head>
 <body>
-    <div id="metroui_menu" class="metro-ui" style="display:none;"></div>
+	<div id="metroui_menu" class="metro-ui" style="display:none;"></div>
     <div id="metroui_item" class="metro-ui" style="display:none;"></div>	
 </body>
 </html>
