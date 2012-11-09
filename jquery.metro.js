@@ -2,7 +2,7 @@
  Metro Menu - Metro UI Style Menus - jQuery Plugin
 
  https://github.com/jollen/metromenu
- version 0.9pre2.121108
+ version 0.9pre1.121106
  Copyright (c) 2012 Jollen Chen
  Licensed under the MIT license
 */
